@@ -1,1 +1,20 @@
- 
+# Default configuration for traderai
+app:
+  name: traderai
+  log_level: INFO
+data:
+  providers:
+    - name: alpaca
+      api_key: ${ALPACA_API_KEY}
+      secret_key: ${ALPACA_SECRET_KEY}
+      endpoint: https://paper-api.alpaca.markets
+  cache:
+    redis_url: redis://localhost:6379/0
+trading:
+  markets:
+    - stocks
+    - crypto
+  max_position_size: 0.1  # 10% of portfolio per trade
+  risk:
+    max_drawdown: 0.2  # 20% max drawdown
+    var_limit: 0.05   # 5% Value-at-Risk 
