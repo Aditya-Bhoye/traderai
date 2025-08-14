@@ -1,1 +1,7 @@
- 
+
+# Production environment overrides
+app:
+  log_level: INFO
+data:
+  cache:
+    redis_url: redis://prod-redis:6379/0 
