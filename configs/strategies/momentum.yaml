@@ -1,1 +1,9 @@
- 
+strategy:
+  name: momentum
+  enabled: true
+  parameters:
+    lookback_period: 20
+    threshold: 0.02
+  risk:
+    stop_loss: 0.03
+    take_profit: 0.05 
