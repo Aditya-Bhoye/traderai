@@ -1,1 +1,9 @@
- 
+ # Development environment overrides
+app:
+  log_level: DEBUG
+data:
+  providers:
+    - name: alpaca
+      endpoint: https://paper-api.alpaca.markets
+trading:
+  max_position_size: 0.05  # 5% in dev
